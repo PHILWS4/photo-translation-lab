@@ -14,7 +14,7 @@ enum Partition: String, CaseIterable, Identifiable, Codable {
     var id: String { rawValue }
     var title: String {
         switch self {
-        case .S0: return "S0 · 全部在手机（待接入）"
+        case .S0: return "S0 · 全部在手机，无需联网"
         case .S1: return "S1 · 手机预处理，电脑识别与翻译"
         case .S2: return "S2 · 手机识别，电脑翻译"
         case .S3: return "S3 · 电脑预处理、识别与翻译"
@@ -22,7 +22,7 @@ enum Partition: String, CaseIterable, Identifiable, Codable {
     }
     var available: Bool {
         #if NATIVE_OCR
-        return self != .S0
+        return true
         #else
         return self == .S1 || self == .S3
         #endif
@@ -69,10 +69,14 @@ struct Health: Decodable {
 // No network calls are permitted inside either local inference method.
 protocol LocalInference: Sendable {
     func prepareOCR() async throws -> [String: String]
+    func prepareTranslation() async throws -> [String: String]
     func recognize(_ png: Data) async throws -> [TextBlock]
     func translate(_ segments: [TextSegment]) async throws -> [Translation]
 }
 struct PendingLocalInference: LocalInference {
+    func prepareTranslation() async throws -> [String: String] {
+        throw LabError.message("当前构建没有手机本地翻译引擎。")
+    }
     func prepareOCR() async throws -> [String: String] {
         throw LabError.message("当前构建没有手机本地 OCR 引擎。")
     }
@@ -99,9 +103,11 @@ struct Measurement: Encodable {
     var model: [String: String] = [:]
     var local_ocr: [String: String] = [:]
     var ocr_prepare_ms: Double = 0
+    var local_translation: [String: String] = [:]
+    var translation_prepare_ms: Double = 0
     var health_check_ms: Double = 0
     var request_path: String?
-    let client_version = "0.2.0"
+    let client_version = "0.3.0"
     let client_preprocess: String = "ios-imageio-max1600-rgb-png-v1-unvalidated"
     let execution_environment: String
     let device_hardware: String
@@ -247,19 +253,27 @@ actor PipelineRunner {
         do {
             _ = try ImageInput.source(data)
             guard mode.available else { throw LabError.message("该方案的手机本地模型尚未接入，不能运行或生成成功记录。") }
-            if mode == .S2 {
+            if mode == .S2 || mode == .S0 {
                 let prepareStart = now()
                 record.local_ocr = try await local.prepareOCR()
                 record.ocr_prepare_ms = (now()-prepareStart)*1000
             }
+            if mode == .S0 {
+                let prepareStart = now()
+                record.local_translation = try await local.prepareTranslation()
+                record.translation_prepare_ms = (now()-prepareStart)*1000
+                record.model = ["ocr": record.local_ocr["ocr"]!, "ocr_manifest_sha256": record.local_ocr["ocr_manifest_sha256"]!,
+                    "translation": record.local_translation["translation"]!, "translation_manifest_sha256": record.local_translation["translation_manifest_sha256"]!,
+                    "translation_execution": record.local_translation["translation_execution"]!, "preprocess": record.client_preprocess, "decoding": record.local_translation["decoding"]!]
+            }
             started = now()
             var payload = data
-            if mode == .S1 || mode == .S2 {
+            if mode == .S1 || mode == .S2 || mode == .S0 {
                 let t = now(); payload = try ImageInput.preprocess(data)
                 record.trace.append(StageMetric(stage: "P", location: "client", duration_ms: (now()-t)*1000))
             }
             var localBlocks: [TextBlock] = []
-            if mode == .S2 {
+            if mode == .S2 || mode == .S0 {
                 let ocrStart = now(); localBlocks = try await local.recognize(payload)
                 record.trace.append(StageMetric(stage: "O", location: "client", duration_ms: (now()-ocrStart)*1000))
                 let organizeStart = now()
@@ -269,12 +283,24 @@ actor PipelineRunner {
                 }
                 record.trace.append(StageMetric(stage: "C", location: "client", duration_ms: (now()-organizeStart)*1000))
                 if segments.isEmpty {
+                    if mode == .S0 { record.trace.append(StageMetric(stage: "T", location: "client", duration_ms: 0)) }
                     record.status = "NO_TEXT"; record.duration_ms = (now()-started!)*1000
                     return RunOutput(measurement: record, segments: [], translations: [], logURL: try save(record))
                 }
                 guard segments.count <= 50, segments.allSatisfy({ $0.text.unicodeScalars.count <= 1500 }) else {
                     throw LabError.message("文字超过接口上限（最多 50 段、每段 1500 字符）；请缩小拍摄范围。")
                 }
+            }
+            // S0 ends before any URL validation, health check or HTTP operation.
+            if mode == .S0 {
+                let translationStart = now()
+                translations = try await local.translate(segments)
+                record.trace.append(StageMetric(stage: "T", location: "client", duration_ms: (now()-translationStart)*1000))
+                guard translations.map(\.segment_id) == segments.map(\.segment_id) else {
+                    throw LabError.message("本地译文句段 ID 不匹配。")
+                }
+                record.status = "SUCCESS"; record.duration_ms = (now()-started!)*1000
+                return RunOutput(measurement: record, segments: segments, translations: translations, logURL: try save(record))
             }
             // Health check is excluded consistently from all task durations, including failures.
             let healthStart = now()

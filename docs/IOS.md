@@ -1,6 +1,6 @@
 # iPhone 接入与当前完成范围
 
-更新时间：2026-11-18，iOS 应用版本 0.2.0。实验设备为 iPhone 15 Pro Max 和 iPhone 16 Pro。不要把两台手机的测量混成一组；系统版本以每次日志为准。
+更新时间：2026-11-24，iOS 应用版本 0.3.0。实验设备为 iPhone 15 Pro Max 和 iPhone 16 Pro。不要把两台手机的测量混成一组；系统版本以每次日志为准。
 
 本次设备工具读取：15 Pro Max 为 iOS 26.6.2（iPhone16,2），16 Pro 为 iOS 27.2（iPhone17,1）。两台系统版本不同，应先分别在每台手机内部比较划分方案；跨设备差异不能全部归因于硬件型号。
 
@@ -8,12 +8,12 @@
 
 | 方案 | Mac Python 参考客户端 | 当前 iOS 应用 |
 |---|---|---|
-| S0：客户端 P/O/C/T | 已实现并通过真实推理验收 | 未实现；禁止运行 |
+| S0：客户端 P/O/C/T | 已实现并通过真实推理验收 | 0.3.0 已实现；本地 OCR 与翻译，无 HTTP |
 | S1：客户端 P，服务端 O/C/T | 已实现并通过真实推理验收 | 已接入；Apple 图像预处理与 Pillow 的一致性尚待验证 |
 | S2：客户端 P/O/C，服务端 T | 已实现并通过真实推理验收 | 0.2.0 已实现；本地三个 OCR 模型，只上传 JSON 文本 |
 | S3：服务端 P/O/C/T | 已实现并通过真实推理验收 | 已接入；上传当前实验输入的原始字节 |
 
-当前 iOS 工程不能据此声称完成了四种真机方案或动态调度。`LocalInference` 的 OCR 已通过 C++/ONNX Runtime 实现，翻译接口仍保留待接入。S2 错误不会静默退回服务器识别。没有切换到 Apple Vision 或 Apple Translation。
+当前 iOS 工程已实现四种固定方案；动态调度及正式统计实验尚未完成。`LocalInference` 的 OCR 和翻译均已通过 C++/ONNX Runtime 实现。S2 错误不会静默退回服务器识别。没有切换到 Apple Vision 或 Apple Translation。
 
 ## 新手操作：第一次安装
 
@@ -31,6 +31,8 @@
 
 ```bash
 .venv/bin/python scripts/prepare_ios_ocr.py
+.venv/bin/python -m pip install -r requirements-ios-build.txt
+.venv/bin/python scripts/prepare_ios_translation.py
 ```
 
 脚本校验官方 SHA256 后才解压框架，并从固定版本 RapidOCR 包复制和校验模型、提取字典。GitHub 下载困难时可以显式使用 `--github-mirror https://ghfast.top` 作为传输入口；校验值仍取自官方发布，不会因镜像而放宽。缓存默认在 `.ios-cache`。Clipper 源码和许可证已附带，完整第三方声明在 `ios/Licenses`，也随 App 打包。
@@ -67,14 +69,14 @@
 - `request_ms` 不能当作纯网络时延；它包含服务推理和排队。阶段耗时由实际执行的一侧测量，不能跨设备相减绝对时间。
 - `upload_body_bytes` 与 `download_body_bytes` 是 HTTP 请求/响应体字节，不含 TCP/TLS 和 HTTP 头；网络错误时上传字段只是准备提交的请求体大小，不代表实际发出的字节数。
 - 普通日志包含任务 ID、方案、输入哈希/大小、硬件标识、设备名称、系统环境、服务模型指纹、阶段和耗时；0.2.0 新增 `local_ocr`（模型清单/字典哈希、端侧库版本、CPU provider 与线程数）、`request_path` 和 `client_version`。S2 的推理路径应为 `v1/translate`。普通日志不保存图片、识别原文或译文；显式开启的内置合成样例自检报告会保存公开样例文字以便比较。模拟器、Mac Swift 合约测试不能作为手机性能结果。
-- 首次推理、温度、低电量模式、充电状态、网络条件、服务器负载均需另行控制或记录。当前还没有自动采集能耗和动态调度。
+- 首次推理、温度、低电量模式、充电状态、网络条件、服务器负载均需另行控制或记录。当前还没有自动采集能耗和动态调度。S0 的翻译加载、校验与预热另记 translation_prepare_ms，排除在任务耗时之外；local_translation 保存执行配置与版本。
 
 ## 后续四方案实现的验收顺序
 
 1. 先完成两台真机的 S3 拍照/选图、请求、结果显示与日志导出测试。
 2. 对照 Python P 检查 EXIF 旋转、RGB、透明图、尺寸、缩放及 OCR 输出；完成 S1 一致性确认。
 3. S2 已接入；继续对真实照片、多种字形和设备做验证。当前 8 个合成样例对照的是 Python 输出，不是人工标注的 OCR 准确率评测。
-4. 接入 ONNX Runtime iOS、SentencePiece 与 Marian vocab 映射，移植相同的 encoder/decoder、起始 token、pad 屏蔽、EOS 和贪心解码上限；逐 token 对照 Python，完成 S0。断网时 S0 必须完整执行且无 HTTP。
+4. S0 已完成同模型移植及 16 Pro 逐 token 验证；继续在 15 Pro Max 和真实图片上复验。断网时 S0 必须完整执行且无 HTTP。
 5. 所有本地模型加载和预热移出单次任务计时；保证固定方案错误不偷偷回退到服务器。
 6. 再开展每台设备内的四方案多轮交错实验，最后开发动态决策与失败策略。
 
@@ -100,3 +102,11 @@ mkdir -p results/swift-smoke
 xcrun swiftc -module-cache-path results/swift-smoke/module-cache -parse-as-library ios/PhotoTranslationLab/Pipeline.swift ios/Smoke.swift -o results/swift-smoke/pipeline-smoke
 results/swift-smoke/pipeline-smoke http://127.0.0.1:8765 data/samples results/swift-smoke
 ```
+
+## 0.3.0 的 S0 与复验
+
+S0 可不填写服务器，直接选择图片运行。P/O/C/T 均在手机执行，健康检查、请求及传输字节均为零。空白图返回 NO_TEXT，T 记零耗时。电脑与手机翻译均采用 `cpu-unfused-deterministic-v1`：关闭图优化、确定性计算、CPU 2/1 线程；不改模型和 256/128 token 限制。模型准备和预热单独计时。必须重启旧服务器后使用新配置，旧测量不能与新批次混合。
+
+SentencePiece iOS 0.2.1 与 Python 0.2.3 的分词、解码分别对照；模型、分词文件在 prepare_ios_translation.py 中按固定 SHA256 校验，App 启动时再校验。依赖源代码、静态库及模型不上传 Git，需按脚本重建。许可证随 App 打包。
+
+`--translation-self-test` 运行 65 项本地检查，包含 33 个分词案例、3 个解码案例、19 条翻译逐 token 对照、2 个边界错误检查和 8 个 S0 图片。S0 测试使用无效服务器地址验证不访问网络。添加 `--all-partitions-self-test -serverAddress http://电脑IP:8765`，再执行 9 项 S1/S2/S3 回归。结果写入 Documents/translation-self-test.json。内置对照仅用于移植功能验证，不代表真实图片整体翻译质量。

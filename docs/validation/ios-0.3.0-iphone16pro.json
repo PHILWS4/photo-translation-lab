@@ -1,0 +1,402 @@
+{
+  "date": "2026-11-24",
+  "app_version": "0.3.0",
+  "device": "iPhone 16 Pro",
+  "environment": "ios-physical-device-27.2.1",
+  "scope": "synthetic functional validation; not a performance benchmark",
+  "passed": true,
+  "checks": [
+    {
+      "name": "tokenize-0",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-1",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-2",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-3",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-4",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-5",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-6",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-7",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-8",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-9",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-10",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-11",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-12",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-13",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-14",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-15",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-16",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-17",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-18",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-19",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-20",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-21",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-22",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-23",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-24",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-25",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-26",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-27",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-28",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-29",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-30",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-31",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "tokenize-32",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "decode-0",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "decode-1",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "decode-2",
+      "detail": "exact",
+      "passed": true
+    },
+    {
+      "name": "translate-0",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-1",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-2",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-3",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-4",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-5",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-6",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-7",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-8",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-9",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-10",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-11",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-12",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-13",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-14",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-15",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-16",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-17",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "translate-18",
+      "detail": "input/output tokens and text exact",
+      "passed": true
+    },
+    {
+      "name": "input-limit",
+      "detail": "本地翻译失败：单句超过 256 token；不会静默截断",
+      "passed": true
+    },
+    {
+      "name": "generation-limit",
+      "detail": "本地翻译失败：译文生成达到长度上限；未把截断文本当成成功结果",
+      "passed": true
+    },
+    {
+      "name": "S0-hello",
+      "detail": "all local; zero HTTP; reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S0-menu",
+      "detail": "all local; zero HTTP; reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S0-blank",
+      "detail": "all local; zero HTTP; reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S0-rotated90",
+      "detail": "all local; zero HTTP; reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S0-upside_down",
+      "detail": "all local; zero HTTP; reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S0-skewed",
+      "detail": "all local; zero HTTP; reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S0-eight_lines",
+      "detail": "all local; zero HTTP; reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S0-wide_line",
+      "detail": "all local; zero HTTP; reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S1-hello",
+      "detail": "reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S2-hello",
+      "detail": "reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S3-hello",
+      "detail": "reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S1-menu",
+      "detail": "reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S2-menu",
+      "detail": "reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S3-menu",
+      "detail": "reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S1-blank",
+      "detail": "reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S2-blank",
+      "detail": "reference text exact",
+      "passed": true
+    },
+    {
+      "name": "S3-blank",
+      "detail": "reference text exact",
+      "passed": true
+    }
+  ],
+  "local_translation": {
+    "onnxruntime": "1.24.2",
+    "sentencepiece": "0.2.1",
+    "decoding": "greedy-no-cache-128-v1",
+    "normalization": "sentencepiece-no-moses",
+    "translation": "Xenova/opus-mt-en-zh@046f55a",
+    "native_manifest_sha256": "460a590e667e2f9d58bd9803d104f46f85b3b9d3591308e0f27120a7206e05c5",
+    "inter_threads": "1",
+    "intra_threads": "2",
+    "translation_manifest_sha256": "63909f657650eb48451b76daf24b3f9ff9209b2f6f4fe45fbf9af3212c5fd9e1",
+    "provider": "CPU",
+    "translation_execution": "cpu-unfused-deterministic-v1"
+  },
+  "physical_offline_check": {
+    "result": "passed",
+    "evidence": "User confirmed airplane mode + Wi-Fi off, built-in Hello world S0 displayed translation; Wi-Fi restored."
+  },
+  "python_regression": {
+    "contract_tests_passed": 4,
+    "real_pipeline_cases_passed": 12
+  },
+  "other_device": "iPhone 15 Pro Max requires final corrected 0.3.0 update"
+}
