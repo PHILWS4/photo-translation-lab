@@ -1,0 +1,21 @@
+{
+  "models_manifest_sha256": "ed9e91e088a9cc5a2a9e1408bd41614ff28afc685212fda2a1cfb5793d74639b",
+  "characters_sha256": "56b0f6c6e802b5c5a297d2d79b1fcf6f7c514d9550338f5818c1517035383249",
+  "native_port": "rapidocr-1.4.4-cpp-v1",
+  "runtime": "onnxruntime-1.24.2",
+  "opencv": "4.12.0",
+  "archives": [
+    {
+      "file": "opencv-4.12.0-ios-framework.zip",
+      "upstream": "https://github.com/opencv/opencv/releases/download/4.12.0/opencv-4.12.0-ios-framework.zip",
+      "transport": "GitHub official and ghfast.top ranged transport; reassembled and verified",
+      "sha256": "86b42c9f141cd9169b91be2fc380b0e556a88a95c98ccc8e7aef8349ab74cf70"
+    },
+    {
+      "file": "onnxruntime-c-1.24.2.zip",
+      "upstream": "https://download.onnxruntime.ai/pod-archive-onnxruntime-c-1.24.2.zip",
+      "transport": "https://download.onnxruntime.ai/pod-archive-onnxruntime-c-1.24.2.zip",
+      "sha256": "f7100a992d2a8135168c8afd831e6a58b465349101982aa58b3e11d36e600b54"
+    }
+  ]
+}

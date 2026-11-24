@@ -1,0 +1,37 @@
+.venv/
+__pycache__/
+.pytest_cache/
+models/translation/*.spm
+models/translation/onnx/
+results/*.jsonl
+*.part
+ios/**/xcuserdata/
+ios/DerivedData/
+results/swift-smoke/
+.ios-cache/
+ios/Vendor/opencv/
+ios/Vendor/onnxruntime/
+ios/Models/*.onnx
+
+# 本机环境、签名、构建产物不进入协作仓库
+.DS_Store
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.pem
+*.key
+*.mobileprovision
+*.provisionprofile
+*.ipa
+*.app/
+*.xcarchive/
+DerivedData/
+build/
+dist/
+*.log
+
+# 原始实验记录保留在各自电脑；审阅后的公开合成样例报告例外
+results/*
+!results/ios_ocr_native_check_16.json

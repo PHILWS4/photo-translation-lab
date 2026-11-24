@@ -1,0 +1,11 @@
+rapidocr-onnxruntime==1.4.4
+onnxruntime>=1.20,<2
+transformers>=4.45,<5
+sentencepiece
+fastapi
+uvicorn
+httpx
+python-multipart
+pytest
+pillow
+requests
