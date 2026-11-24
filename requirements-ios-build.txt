@@ -1,0 +1,2 @@
+# Mac-only tool to build the pinned SentencePiece iOS static library.
+cmake==4.1.3

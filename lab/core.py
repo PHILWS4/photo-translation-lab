@@ -42,6 +42,7 @@ class Engines:
   self.tokenizer=MarianTokenizer.from_pretrained(str(path),local_files_only=True)
   self.config=json.loads((path/'config.json').read_text())
   options=ort.SessionOptions();options.intra_op_num_threads=2;options.inter_op_num_threads=1
+  options.graph_optimization_level=ort.GraphOptimizationLevel.ORT_DISABLE_ALL;options.use_deterministic_compute=True
   self.encoder=ort.InferenceSession(str(path/'onnx/encoder_model_quantized.onnx'),sess_options=options,providers=['CPUExecutionProvider'])
   self.decoder=ort.InferenceSession(str(path/'onnx/decoder_model_quantized.onnx'),sess_options=options,providers=['CPUExecutionProvider'])
   self.initialized_ms['translation']=(time.perf_counter()-start)*1000
@@ -83,4 +84,4 @@ def run_image(engines,data,start,location):
 def fingerprint():
  p=ROOT/'models/translation/manifest.json'
  ocr_manifest=ROOT/'models/ocr-manifest.json'
- return {'ocr':'rapidocr-onnxruntime-1.4.4','ocr_manifest_sha256':hashlib.sha256(ocr_manifest.read_bytes()).hexdigest(),'translation':'Xenova/opus-mt-en-zh@046f55a','translation_manifest_sha256':hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else None,'preprocess':'exif-rgb-max1600-png-v1','decoding':'greedy-no-cache-128-v1'}
+ return {'ocr':'rapidocr-onnxruntime-1.4.4','ocr_manifest_sha256':hashlib.sha256(ocr_manifest.read_bytes()).hexdigest(),'translation':'Xenova/opus-mt-en-zh@046f55a','translation_manifest_sha256':hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else None,'preprocess':'exif-rgb-max1600-png-v1','decoding':'greedy-no-cache-128-v1','translation_execution':'cpu-unfused-deterministic-v1'}

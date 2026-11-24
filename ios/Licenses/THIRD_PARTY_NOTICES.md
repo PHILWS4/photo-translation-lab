@@ -8,3 +8,9 @@ NativeOCR.cpp adapts preprocessing and postprocessing from RapidAI/RapidOCR 1.4.
 - Clipper 6.4.2: Angus Johnson, copyright 2010–2017, Boost Software License 1.0. See Boost-1.0.txt and the attribution in the source headers. Unmodified clipper.cpp/clipper.hpp were extracted from pyclipper 1.4.0's source archive (SHA256 9882bd889f27da78add4dd6f881d25697efc740bf840274e749988d25496c8e1). The pyclipper distribution's separate MIT license is retained as pyclipper-MIT.txt.
 
 Native inference uses the CPU provider, two intra-op threads and one inter-op thread. The Mac reference currently uses different ONNX Runtime/OpenCV library versions. Identical weights do not establish numerical equivalence; comparison results and versions are recorded separately. No Apple Vision substitution is made.
+
+# Native translation dependencies
+
+NativeTranslationBridge.mm implements MarianTokenizer-compatible vocabulary mapping and cleanup (Hugging Face Transformers, Apache-2.0). SentencePiece 0.2.1 is built from the pinned PyPI source archive; Apache-2.0 and bundled Abseil, Protobuf and Darts notices are retained in SentencePiece*.txt. Python uses SentencePiece 0.2.3; tokenization is checked explicitly. OPUS translation model source and pinned checksums remain in models/translation; no new model license is granted by this project.
+
+Both native and Python translation use CPU, two intra-op threads, one inter-op thread, ORT_DISABLE_ALL and deterministic compute. This explicit execution configuration avoids the observed platform-dependent fusion differences; it does not establish equivalence on all possible inputs or devices.

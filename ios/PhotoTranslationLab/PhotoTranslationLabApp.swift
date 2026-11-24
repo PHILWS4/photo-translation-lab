@@ -17,7 +17,7 @@ struct ContentView: View {
     @State private var importing = false
     @State private var camera = false
     @State private var busy = false
-    @State private var message = "先启动电脑上的手机联调服务器，再填写它显示的局域网地址。"
+    @State private var message = "S0 可直接离线使用；S1、S2、S3 需先连接电脑服务器。"
     @State private var output: RunOutput?
     @State private var logURL: URL?
     @State private var selfTestStarted = false
@@ -33,7 +33,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("1 · 连接电脑") {
+                Section("1 · 设备与服务器（S0 可不连接）") {
                     TextField("实验设备名称：15 Pro Max / 16 Pro", text: $deviceLabel)
                     TextField("http://电脑IP:8765", text: $address)
                         .textInputAutocapitalization(.never).autocorrectionDisabled().keyboardType(.URL)
@@ -78,7 +78,7 @@ struct ContentView: View {
                     Picker("方案", selection: $mode) {
                         ForEach(Partition.allCases) { p in Text(p.title).tag(p).disabled(!p.available) }
                     }.pickerStyle(.inline)
-                    Text("S2 在手机运行 OCR，只上传文字。S0 的本地翻译待接入。当前属于联调版本，正式实验前仍需核对预处理一致性。")
+                    Text("S0 在手机完成识别与翻译，无需服务器；S2 只上传文字。正式实验前仍需核对预处理一致性。")
                         .font(.caption).foregroundStyle(.secondary)
                     Button {
                         guard let imageData else { return }
@@ -114,9 +114,12 @@ struct ContentView: View {
                         LabeledContent("方案", value: output.measurement.mode.rawValue)
                         LabeledContent("任务耗时", value: String(format: "%.1f ms", output.measurement.duration_ms))
                         LabeledContent("HTTP 请求耗时", value: String(format: "%.1f ms", output.measurement.request_ms))
-                        if output.measurement.mode == .S2 {
+                        if output.measurement.mode == .S2 || output.measurement.mode == .S0 {
                             LabeledContent("本地 OCR 准备（不计入任务）", value: String(format: "%.1f ms", output.measurement.ocr_prepare_ms))
-                            Text("上传内容：JSON 文本句段，未上传图片。")
+                            Text(output.measurement.upload_body_bytes == 0 ? "未上传任何图片或文字。" : "上传内容：JSON 文本句段，未上传图片。")
+                        }
+                        if output.measurement.mode == .S0 {
+                            LabeledContent("本地翻译准备（不计入任务）", value: String(format: "%.1f ms", output.measurement.translation_prepare_ms))
                         }
                         LabeledContent("上传请求体", value: "\(output.measurement.upload_body_bytes) 字节")
                         ForEach(Array(output.measurement.trace.enumerated()), id: \.offset) { _, item in
@@ -131,6 +134,12 @@ struct ContentView: View {
                 }
             }.navigationTitle("拍照翻译实验")
             .task {
+                if !selfTestStarted, ProcessInfo.processInfo.arguments.contains("--translation-self-test") {
+                    selfTestStarted = true; busy = true; message = "正在运行本地翻译与 S0 自检…"
+                    let remote = ProcessInfo.processInfo.arguments.contains("--all-partitions-self-test") ? address : nil
+                    message = await TranslationSelfTest.run(environment: environment, remote: remote)
+                    busy = false; return
+                }
                 guard !selfTestStarted, ProcessInfo.processInfo.arguments.contains("--ocr-self-test") else { return }
                 selfTestStarted = true; busy = true; message = "正在运行内置样例 OCR 自检…"
                 let remote = ProcessInfo.processInfo.arguments.contains("--s2-self-test") ? address : nil

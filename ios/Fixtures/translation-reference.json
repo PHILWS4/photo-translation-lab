@@ -1,0 +1,1196 @@
+{
+  "reference_environment": "mac-python-reference-not-mobile",
+  "translation_execution": "cpu-unfused-deterministic-v1",
+  "reference_sentencepiece": "0.2.3",
+  "translation_manifest_sha256": "63909f657650eb48451b76daf24b3f9ff9209b2f6f4fe45fbf9af3212c5fd9e1",
+  "translation_cases": [
+    {
+      "source": "Hello world.",
+      "input_ids": [
+        3828,
+        431,
+        6,
+        0
+      ],
+      "output_ids": [
+        8,
+        28787,
+        757,
+        10,
+        0
+      ],
+      "text": "这个世界好。"
+    },
+    {
+      "source": "Welcome to our school.",
+      "input_ids": [
+        12907,
+        9,
+        289,
+        1498,
+        6,
+        0
+      ],
+      "output_ids": [
+        3262,
+        12528,
+        3171,
+        1852,
+        0
+      ],
+      "text": "欢迎来到我们的学校"
+    },
+    {
+      "source": "Fresh coffee and hot tea.",
+      "input_ids": [
+        53245,
+        12223,
+        7,
+        8597,
+        18322,
+        6,
+        0
+      ],
+      "output_ids": [
+        8,
+        31617,
+        10010,
+        18,
+        4573,
+        15105,
+        0
+      ],
+      "text": "新鲜咖啡和热茶"
+    },
+    {
+      "source": "Please pay at the counter.",
+      "input_ids": [
+        1878,
+        1928,
+        48,
+        3,
+        2990,
+        6,
+        0
+      ],
+      "output_ids": [
+        1343,
+        38,
+        24827,
+        4254,
+        37213,
+        0
+      ],
+      "text": "请在柜台付钱"
+    },
+    {
+      "source": "Hello world",
+      "input_ids": [
+        3828,
+        431,
+        0
+      ],
+      "output_ids": [
+        8,
+        9193,
+        757,
+        955,
+        757,
+        16459,
+        0
+      ],
+      "text": "喜好世界好你好"
+    },
+    {
+      "source": "Local OCR runs on this phone.",
+      "input_ids": [
+        7582,
+        2027,
+        24207,
+        18889,
+        19,
+        58,
+        6329,
+        6,
+        0
+      ],
+      "output_ids": [
+        8,
+        11207,
+        12,
+        13855,
+        2628,
+        10623,
+        2642,
+        158,
+        7777,
+        0
+      ],
+      "text": "本地的OCR在这个电话上运行"
+    },
+    {
+      "source": "Only text goes to the server.",
+      "input_ids": [
+        5924,
+        1596,
+        6296,
+        9,
+        3,
+        27405,
+        6,
+        0
+      ],
+      "output_ids": [
+        5764,
+        5198,
+        14954,
+        1838,
+        18873,
+        10,
+        0
+      ],
+      "text": "只有文本才会进入服务器。"
+    },
+    {
+      "source": "The model stays the same.",
+      "input_ids": [
+        26,
+        3605,
+        39405,
+        3,
+        471,
+        6,
+        0
+      ],
+      "output_ids": [
+        8,
+        11783,
+        1810,
+        3220,
+        8719,
+        0
+      ],
+      "text": "模型保持原样"
+    },
+    {
+      "source": "Please open the blue door.",
+      "input_ids": [
+        1878,
+        1459,
+        3,
+        16450,
+        6005,
+        6,
+        0
+      ],
+      "output_ids": [
+        1343,
+        10958,
+        33016,
+        3019,
+        0
+      ],
+      "text": "请打开蓝色门"
+    },
+    {
+      "source": "Room205isontheleft.",
+      "input_ids": [
+        2519,
+        131,
+        5037,
+        43931,
+        1862,
+        58730,
+        6,
+        0
+      ],
+      "output_ids": [
+        8,
+        14478,
+        449,
+        152,
+        38,
+        38490,
+        0
+      ],
+      "text": "房间205在左边"
+    },
+    {
+      "source": "Freshcoffeecosts12dollars",
+      "input_ids": [
+        53245,
+        149,
+        5704,
+        9580,
+        19803,
+        24,
+        161,
+        52746,
+        24,
+        0
+      ],
+      "output_ids": [
+        8,
+        31617,
+        10010,
+        670,
+        641,
+        8,
+        161,
+        437,
+        0
+      ],
+      "text": "新鲜咖啡新用 12美元"
+    },
+    {
+      "source": "The library closes at seven.",
+      "input_ids": [
+        26,
+        17189,
+        1808,
+        24,
+        48,
+        3718,
+        6,
+        0
+      ],
+      "output_ids": [
+        8,
+        7511,
+        4663,
+        994,
+        6826,
+        0
+      ],
+      "text": "图书馆七点关闭"
+    },
+    {
+      "source": "Thank you for your help.",
+      "input_ids": [
+        2547,
+        39,
+        15,
+        171,
+        721,
+        6,
+        0
+      ],
+      "output_ids": [
+        9112,
+        12,
+        999,
+        0
+      ],
+      "text": "谢谢你的帮助"
+    },
+    {
+      "source": "One short line of English.",
+      "input_ids": [
+        1290,
+        2849,
+        1586,
+        4,
+        3287,
+        6,
+        0
+      ],
+      "output_ids": [
+        8,
+        22971,
+        7139,
+        12,
+        13670,
+        10,
+        0
+      ],
+      "text": "一句短的英语。"
+    },
+    {
+      "source": "I can't find the train station.",
+      "input_ids": [
+        28,
+        123,
+        23,
+        60,
+        1299,
+        3,
+        8396,
+        6554,
+        6,
+        0
+      ],
+      "output_ids": [
+        105,
+        13612,
+        20844,
+        2941,
+        57,
+        0
+      ],
+      "text": "我找不到火车站了"
+    },
+    {
+      "source": "The price is $12.50.",
+      "input_ids": [
+        26,
+        4719,
+        32,
+        21739,
+        30827,
+        6,
+        0
+      ],
+      "output_ids": [
+        8,
+        4999,
+        3156,
+        72,
+        161,
+        6,
+        1462,
+        437,
+        0
+      ],
+      "text": "价钱是12.50美元"
+    },
+    {
+      "source": "Please turn left at the next street.",
+      "input_ids": [
+        1878,
+        3173,
+        2130,
+        48,
+        3,
+        1222,
+        8979,
+        6,
+        0
+      ],
+      "output_ids": [
+        1343,
+        38,
+        16529,
+        6943,
+        10629,
+        3264,
+        0
+      ],
+      "text": "请在下一街左转"
+    },
+    {
+      "source": "Keep this medicine away from children.",
+      "input_ids": [
+        8785,
+        58,
+        14299,
+        1811,
+        51,
+        238,
+        6,
+        0
+      ],
+      "output_ids": [
+        8,
+        24393,
+        292,
+        5136,
+        21001,
+        2913,
+        0
+      ],
+      "text": "不让这些药远离孩子"
+    },
+    {
+      "source": "Open from 9:00 AM to 5:00 PM.",
+      "input_ids": [
+        4617,
+        51,
+        54996,
+        37034,
+        9,
+        56707,
+        49860,
+        6,
+        0
+      ],
+      "output_ids": [
+        5835,
+        215,
+        10086,
+        4744,
+        152,
+        148,
+        3880,
+        10,
+        0
+      ],
+      "text": "上午9时至下午5时开放。"
+    }
+  ],
+  "tokenization_cases": [
+    {
+      "source": "",
+      "ids": [
+        0
+      ]
+    },
+    {
+      "source": " ",
+      "ids": [
+        0
+      ]
+    },
+    {
+      "source": "\tHello\nworld.  ",
+      "ids": [
+        3828,
+        431,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "café naïve résumé",
+      "ids": [
+        56847,
+        1062,
+        30246,
+        32200,
+        411,
+        15174,
+        1062,
+        20397,
+        1062,
+        0
+      ]
+    },
+    {
+      "source": "“Hello”—she said…",
+      "ids": [
+        196,
+        48851,
+        217,
+        920,
+        15277,
+        415,
+        70,
+        0
+      ]
+    },
+    {
+      "source": "Hello world",
+      "ids": [
+        3828,
+        431,
+        0
+      ]
+    },
+    {
+      "source": "ＡＢＣ １２３",
+      "ids": [
+        80,
+        33550,
+        23346,
+        0
+      ]
+    },
+    {
+      "source": "English 中文 😀",
+      "ids": [
+        3287,
+        8,
+        21121,
+        8,
+        1,
+        0
+      ]
+    },
+    {
+      "source": "<unk> Hello </s><pad>",
+      "ids": [
+        1,
+        3828,
+        0,
+        65000,
+        0
+      ]
+    },
+    {
+      "source": ">>zh<<Hello world.",
+      "ids": [
+        1,
+        3828,
+        431,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "A<unk>B",
+      "ids": [
+        80,
+        1,
+        370,
+        0
+      ]
+    },
+    {
+      "source": "Hello\u0000world",
+      "ids": [
+        3828,
+        1,
+        40355,
+        0
+      ]
+    },
+    {
+      "source": " é ",
+      "ids": [
+        8,
+        1062,
+        0
+      ]
+    },
+    {
+      "source": "one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two one two ",
+      "ids": [
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        141,
+        263,
+        0
+      ]
+    },
+    {
+      "source": "Hello world.",
+      "ids": [
+        3828,
+        431,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Welcome to our school.",
+      "ids": [
+        12907,
+        9,
+        289,
+        1498,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Fresh coffee and hot tea.",
+      "ids": [
+        53245,
+        12223,
+        7,
+        8597,
+        18322,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Please pay at the counter.",
+      "ids": [
+        1878,
+        1928,
+        48,
+        3,
+        2990,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Hello world",
+      "ids": [
+        3828,
+        431,
+        0
+      ]
+    },
+    {
+      "source": "Local OCR runs on this phone.",
+      "ids": [
+        7582,
+        2027,
+        24207,
+        18889,
+        19,
+        58,
+        6329,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Only text goes to the server.",
+      "ids": [
+        5924,
+        1596,
+        6296,
+        9,
+        3,
+        27405,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "The model stays the same.",
+      "ids": [
+        26,
+        3605,
+        39405,
+        3,
+        471,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Please open the blue door.",
+      "ids": [
+        1878,
+        1459,
+        3,
+        16450,
+        6005,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Room205isontheleft.",
+      "ids": [
+        2519,
+        131,
+        5037,
+        43931,
+        1862,
+        58730,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Freshcoffeecosts12dollars",
+      "ids": [
+        53245,
+        149,
+        5704,
+        9580,
+        19803,
+        24,
+        161,
+        52746,
+        24,
+        0
+      ]
+    },
+    {
+      "source": "The library closes at seven.",
+      "ids": [
+        26,
+        17189,
+        1808,
+        24,
+        48,
+        3718,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Thank you for your help.",
+      "ids": [
+        2547,
+        39,
+        15,
+        171,
+        721,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "One short line of English.",
+      "ids": [
+        1290,
+        2849,
+        1586,
+        4,
+        3287,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "I can't find the train station.",
+      "ids": [
+        28,
+        123,
+        23,
+        60,
+        1299,
+        3,
+        8396,
+        6554,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "The price is $12.50.",
+      "ids": [
+        26,
+        4719,
+        32,
+        21739,
+        30827,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Please turn left at the next street.",
+      "ids": [
+        1878,
+        3173,
+        2130,
+        48,
+        3,
+        1222,
+        8979,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Keep this medicine away from children.",
+      "ids": [
+        8785,
+        58,
+        14299,
+        1811,
+        51,
+        238,
+        6,
+        0
+      ]
+    },
+    {
+      "source": "Open from 9:00 AM to 5:00 PM.",
+      "ids": [
+        4617,
+        51,
+        54996,
+        37034,
+        9,
+        56707,
+        49860,
+        6,
+        0
+      ]
+    }
+  ],
+  "decoding_cases": [
+    {
+      "ids": [
+        0,
+        1,
+        65000
+      ],
+      "text": ""
+    },
+    {
+      "ids": [
+        65000,
+        8,
+        28787,
+        757,
+        10,
+        0,
+        1,
+        0
+      ],
+      "text": "这个世界好。"
+    },
+    {
+      "ids": [
+        23675,
+        8,
+        6,
+        28,
+        85,
+        100,
+        3358,
+        6541,
+        0
+      ],
+      "text": "hello. I'm fine!"
+    }
+  ],
+  "image_cases": [
+    {
+      "name": "hello",
+      "input_sha256": "478d5930cef70a645c8a7243960bd474337c43d484fdd8e87697993a702be7ff",
+      "segments": [
+        "Hello world.",
+        "Welcome to our school."
+      ],
+      "translations": [
+        "这个世界好。",
+        "欢迎来到我们的学校"
+      ]
+    },
+    {
+      "name": "menu",
+      "input_sha256": "439673737a7ad36ccc910761011fbc47c2e0ed71b2fc4262d8a6a5929db997ca",
+      "segments": [
+        "Fresh coffee and hot tea.",
+        "Please pay at the counter."
+      ],
+      "translations": [
+        "新鲜咖啡和热茶",
+        "请在柜台付钱"
+      ]
+    },
+    {
+      "name": "blank",
+      "input_sha256": "fa42905cba739fd1e00e66c1d0da3c79baf493854cd55e9e6f6ca8d34265d5d0",
+      "segments": [],
+      "translations": []
+    },
+    {
+      "name": "rotated90",
+      "input_sha256": "5e4199efe885fb542d327cf3ba471b9d9c884e73204633dec7c32ffae6005b5b",
+      "segments": [
+        "Welcome to our school.",
+        "Hello world."
+      ],
+      "translations": [
+        "欢迎来到我们的学校",
+        "这个世界好。"
+      ]
+    },
+    {
+      "name": "upside_down",
+      "input_sha256": "b1a379766ce71a652735723b3f8e34da9284840cca7908b832375eca649b95b9",
+      "segments": [
+        "Welcome to our school.",
+        "Hello world"
+      ],
+      "translations": [
+        "欢迎来到我们的学校",
+        "喜好世界好你好"
+      ]
+    },
+    {
+      "name": "skewed",
+      "input_sha256": "7dca271d53cad3b6f08459b4650f87695010cdc78d018e1f1cd2b3d23451943b",
+      "segments": [
+        "Hello world.",
+        "Welcome to our school."
+      ],
+      "translations": [
+        "这个世界好。",
+        "欢迎来到我们的学校"
+      ]
+    },
+    {
+      "name": "eight_lines",
+      "input_sha256": "823a426c2343a0fab1dc743d3a2d08fcebab473c403ad28af9dafbdce369bac5",
+      "segments": [
+        "Local OCR runs on this phone.",
+        "Only text goes to the server.",
+        "The model stays the same.",
+        "Please open the blue door.",
+        "Room205isontheleft.",
+        "Freshcoffeecosts12dollars",
+        "The library closes at seven.",
+        "Thank you for your help."
+      ],
+      "translations": [
+        "本地的OCR在这个电话上运行",
+        "只有文本才会进入服务器。",
+        "模型保持原样",
+        "请打开蓝色门",
+        "房间205在左边",
+        "新鲜咖啡新用 12美元",
+        "图书馆七点关闭",
+        "谢谢你的帮助"
+      ]
+    },
+    {
+      "name": "wide_line",
+      "input_sha256": "24150a2d11d9eb50d29e9ff124b64d3b85175ec038d6b14c217bef25fd3fd67c",
+      "segments": [
+        "One short line of English."
+      ],
+      "translations": [
+        "一句短的英语。"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # 两个人用 GitHub 和 Codex 接力开发
 
-你用 Mac，同学用 Windows。各自登录自己的 GitHub 与 Codex 账号，共享一个私有仓库。GitHub 保存代码版本；每个人的 Codex 在各自电脑上的项目副本中工作。不要通过交换账号密码来交接。
+你用 Mac，同学用 Windows。各自登录自己的 GitHub 与 Codex 账号，共享一个公开仓库（本项目已按用户要求公开）。GitHub 保存代码版本；每个人的 Codex 在各自电脑上的项目副本中工作。不要通过交换账号密码来交接。
 
 ## 1. Mac 首次发布
 
@@ -9,7 +9,7 @@
 3. 若提示不是 Git 仓库，使用提示中的 Create a Repository 链接在此文件夹初始化；不要再套一层同名目录。若助手已初始化，直接添加即可。
 4. 在 Changes 检查待提交文件：应有源码、文档、合成样例；不应有 .venv、大型模型/框架、签名或原始个人日志。`.gitignore` 已配置忽略，不删除本机文件。
 5. Summary 填 `Initial project handoff`，点击 Commit to main（若初始提交已存在，跳过）。Commit 只保存本地版本。
-6. 点击 Publish repository，名称用 `photo-translation-lab`，保持 **Keep this code private** 勾选，然后 Publish Repository。此步才会上传 GitHub。
+6. 点击 Publish repository，名称用 `photo-translation-lab`，本项目选择公开，应取消 **Keep this code private** 勾选，然后 Publish Repository。此步才会上传 GitHub。
 7. 在仓库网页 Settings → Collaborators → Add people，输入同学 GitHub 用户名，核对身份后邀请。让同学接受邀请。
 
 仓库初次发布以这个已整理的目录为准，外层压缩包、Downloads 和 work 不属于仓库。模型由脚本按固定版本下载；虚拟环境须在各自电脑重建。

@@ -12,6 +12,8 @@ results/swift-smoke/
 ios/Vendor/opencv/
 ios/Vendor/onnxruntime/
 ios/Models/*.onnx
+ios/Models/translation/
+ios/Vendor/sentencepiece/
 
 # 本机环境、签名、构建产物不进入协作仓库
 .DS_Store
