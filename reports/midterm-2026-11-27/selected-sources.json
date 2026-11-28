@@ -1,0 +1,64 @@
+[
+  {
+    "id": "01",
+    "title": "No Photos (7843478140).jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:No_Photos_%287843478140%29.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/No_Photos_%287843478140%29.jpg",
+    "local_file": "01.jpg",
+    "input_bytes": 223927,
+    "width": 1600,
+    "height": 1200,
+    "sha256": "f98d91c6117e47495458edbedc1040ee61346e91dd87ea1ad4dd02e7c34c8cde",
+    "transformation": "none; original JPEG bytes"
+  },
+  {
+    "id": "02",
+    "title": "NoticeKeepGateClosedAndLocked.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:NoticeKeepGateClosedAndLocked.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/NoticeKeepGateClosedAndLocked.jpg",
+    "replaces": "Please Keep Out!!! (5462096928).jpg: excluded after visual inspection because handwritten",
+    "local_file": "02-printed.jpg",
+    "input_bytes": 1250726,
+    "width": 1536,
+    "height": 1536,
+    "sha256": "4d0af9a72fcd56f0fc51e8aec4a2ec6f0d9b1edf40b63e3f6ca17af712ae7341",
+    "transformation": "none; original JPEG bytes"
+  },
+  {
+    "id": "03",
+    "title": "“Please keep off the grass” sign - geograph.org.uk - 6040547.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E2%80%9CPlease_keep_off_the_grass%E2%80%9D_sign_-_geograph.org.uk_-_6040547.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/%E2%80%9CPlease_keep_off_the_grass%E2%80%9D_sign_-_geograph.org.uk_-_6040547.jpg",
+    "local_file": "03.jpg",
+    "input_bytes": 3227919,
+    "width": 4608,
+    "height": 3456,
+    "sha256": "ed59f2ab7b8d86519c50d36b85da14d4705b4e894487950fc8fb8f7400f04c74",
+    "transformation": "none; original JPEG bytes"
+  },
+  {
+    "id": "04",
+    "title": "Harry B. Anderson Tennis Center - Pickleball Court Rules.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Harry_B._Anderson_Tennis_Center_-_Pickleball_Court_Rules.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Harry_B._Anderson_Tennis_Center_-_Pickleball_Court_Rules.jpg",
+    "replaces": "Breakfast menu - Café Belchers.jpg: excluded for multi-column cursive text and reflections",
+    "local_file": "04-rules.jpg",
+    "input_bytes": 3658978,
+    "width": 4032,
+    "height": 3024,
+    "sha256": "a0f537b438ab4e90f902dd80c53240e9959475caab18bb755ccdf6ee0d56b85d",
+    "transformation": "none; original JPEG bytes"
+  },
+  {
+    "id": "05",
+    "title": "Hotel Corones rules 20191124.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Hotel_Corones_rules_20191124.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Hotel_Corones_rules_20191124.jpg",
+    "local_file": "05.jpg",
+    "input_bytes": 1724053,
+    "width": 2474,
+    "height": 3452,
+    "sha256": "c402487d2d7887daf9d11749d38a5af29ac9629db63fddae3d445d19930d9ff4",
+    "transformation": "none; original JPEG bytes"
+  }
+]

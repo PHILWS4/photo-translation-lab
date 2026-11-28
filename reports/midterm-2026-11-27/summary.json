@@ -1,0 +1,567 @@
+{
+  "batch_id": "formal-20261127-02",
+  "phase": "formal",
+  "formal_attempts": 200,
+  "warmup_attempts": 20,
+  "successes": 160,
+  "errors": 40,
+  "groups": [
+    {
+      "sample_id": "01",
+      "mode": "S0",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 1010.0667249993421,
+      "median_ms": 1003.910958301276,
+      "sd_ms": 22.60408809468165,
+      "min_ms": 990.5577499885112,
+      "max_ms": 1064.1419583698735,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 0,
+      "mean_stage_ms": {
+        "P": 101.70907917199656,
+        "O": 414.99215833609924,
+        "C": 0.0038666592445224524,
+        "T": 493.3593833411578
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "01",
+      "mode": "S1",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 1052.0398333261255,
+      "median_ms": 1059.590645803837,
+      "sd_ms": 71.60807709042922,
+      "min_ms": 939.7057500318624,
+      "max_ms": 1145.2898333664052,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 2173522,
+      "mean_stage_ms": {
+        "P": 104.21953333425336,
+        "O": 323.3611,
+        "C": 0.002,
+        "T": 396.41880000000003
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "01",
+      "mode": "S2",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 1007.709424989298,
+      "median_ms": 1010.2358124859165,
+      "sd_ms": 32.76518622709547,
+      "min_ms": 940.6564166420139,
+      "max_ms": 1043.2013749377802,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 293,
+      "mean_stage_ms": {
+        "P": 106.56002917676233,
+        "O": 411.39576250570826,
+        "C": 0.0038916768971830606,
+        "T": 423.8749
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "01",
+      "mode": "S3",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 855.7893333490938,
+      "median_ms": 856.9121250184253,
+      "sd_ms": 32.31476014513841,
+      "min_ms": 815.0759166455828,
+      "max_ms": 894.0318333916366,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 224355,
+      "mean_stage_ms": {
+        "P": 101.2285,
+        "O": 288.2557,
+        "C": 0.002,
+        "T": 396.7225
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "02",
+      "mode": "S0",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 1017.2926541650668,
+      "median_ms": 1020.3546249831561,
+      "sd_ms": 34.88361946479972,
+      "min_ms": 959.9271250190213,
+      "max_ms": 1090.2421250357293,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 0,
+      "mean_stage_ms": {
+        "P": 163.4513208293356,
+        "O": 486.6150250134524,
+        "C": 0.003487500362098217,
+        "T": 367.22033750265837
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "02",
+      "mode": "S1",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 1179.6589041652624,
+      "median_ms": 1171.958791645011,
+      "sd_ms": 67.69840936151162,
+      "min_ms": 1089.2910833354108,
+      "max_ms": 1283.8952083257027,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 4478115,
+      "mean_stage_ms": {
+        "P": 165.38668750436045,
+        "O": 360.9574,
+        "C": 0.002,
+        "T": 284.6087
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "02",
+      "mode": "S2",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 1028.0658791656606,
+      "median_ms": 1010.7669375138357,
+      "sd_ms": 67.7813768488665,
+      "min_ms": 976.3485833536834,
+      "max_ms": 1214.9615000234917,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 248,
+      "mean_stage_ms": {
+        "P": 167.6951333298348,
+        "O": 486.5493541583419,
+        "C": 0.0036458310205489397,
+        "T": 308.6113
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "02",
+      "mode": "S3",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 907.9907333129086,
+      "median_ms": 883.0335832899436,
+      "sd_ms": 74.95814400945957,
+      "min_ms": 798.1827083858661,
+      "max_ms": 1024.017041665502,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 1251154,
+      "mean_stage_ms": {
+        "P": 126.3774,
+        "O": 341.9937,
+        "C": 0.002,
+        "T": 280.2672
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "03",
+      "mode": "S0",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 665.3755291772541,
+      "median_ms": 666.4284375146963,
+      "sd_ms": 8.619550097294923,
+      "min_ms": 652.085708337836,
+      "max_ms": 679.0801666793413,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 0,
+      "mean_stage_ms": {
+        "P": 147.72048749146052,
+        "O": 360.66057916614227,
+        "C": 0.003137486055493355,
+        "T": 156.9888208352495
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "03",
+      "mode": "S1",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 814.7284458333161,
+      "median_ms": 790.6731875264086,
+      "sd_ms": 92.46020447387536,
+      "min_ms": 688.7114999699406,
+      "max_ms": 974.9921249458566,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 2690868,
+      "mean_stage_ms": {
+        "P": 142.18833333579823,
+        "O": 287.3683,
+        "C": 0.0019,
+        "T": 123.2041
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "03",
+      "mode": "S2",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 700.1889583247248,
+      "median_ms": 684.9443124374375,
+      "sd_ms": 52.89139949005966,
+      "min_ms": 651.9051250070333,
+      "max_ms": 841.2278749747202,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 211,
+      "mean_stage_ms": {
+        "P": 148.91851665452123,
+        "O": 378.96958750789054,
+        "C": 0.00317917438223958,
+        "T": 153.4616
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "03",
+      "mode": "S3",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 845.7404916756786,
+      "median_ms": 855.4209583089687,
+      "sd_ms": 60.41837282400789,
+      "min_ms": 746.3887083576992,
+      "max_ms": 929.2945833294652,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 3228347,
+      "mean_stage_ms": {
+        "P": 195.8249,
+        "O": 254.9976,
+        "C": 0.0027,
+        "T": 124.1953
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "04",
+      "mode": "S0",
+      "attempts": 10,
+      "successes": 0,
+      "errors": 10,
+      "no_text": 0,
+      "success_rate": 0.0,
+      "mean_ms": null,
+      "median_ms": null,
+      "sd_ms": null,
+      "min_ms": null,
+      "max_ms": null,
+      "failure_mean_ms": 5610.413862514542,
+      "mean_upload_body_bytes": null,
+      "mean_stage_ms": {},
+      "distinct_outputs": 0,
+      "failed_reasons": {
+        "本地翻译失败：译文生成达到长度上限；未把截断文本当成成功结果\n失败记录已保存至 ios-runs.jsonl。": 10
+      }
+    },
+    {
+      "sample_id": "04",
+      "mode": "S1",
+      "attempts": 10,
+      "successes": 0,
+      "errors": 10,
+      "no_text": 0,
+      "success_rate": 0.0,
+      "mean_ms": null,
+      "median_ms": null,
+      "sd_ms": null,
+      "min_ms": null,
+      "max_ms": null,
+      "failure_mean_ms": 4062.575175013626,
+      "mean_upload_body_bytes": null,
+      "mean_stage_ms": {},
+      "distinct_outputs": 0,
+      "failed_reasons": {
+        "HTTP 422：译文生成达到长度上限，未把截断文本当成成功结果\n失败记录已保存至 ios-runs.jsonl。": 10
+      }
+    },
+    {
+      "sample_id": "04",
+      "mode": "S2",
+      "attempts": 10,
+      "successes": 0,
+      "errors": 10,
+      "no_text": 0,
+      "success_rate": 0.0,
+      "mean_ms": null,
+      "median_ms": null,
+      "sd_ms": null,
+      "min_ms": null,
+      "max_ms": null,
+      "failure_mean_ms": 4156.114125001477,
+      "mean_upload_body_bytes": null,
+      "mean_stage_ms": {},
+      "distinct_outputs": 0,
+      "failed_reasons": {
+        "HTTP 422：译文生成达到长度上限，未把截断文本当成成功结果\n失败记录已保存至 ios-runs.jsonl。": 10
+      }
+    },
+    {
+      "sample_id": "04",
+      "mode": "S3",
+      "attempts": 10,
+      "successes": 0,
+      "errors": 10,
+      "no_text": 0,
+      "success_rate": 0.0,
+      "mean_ms": null,
+      "median_ms": null,
+      "sd_ms": null,
+      "min_ms": null,
+      "max_ms": null,
+      "failure_mean_ms": 4057.8455125098117,
+      "mean_upload_body_bytes": null,
+      "mean_stage_ms": {},
+      "distinct_outputs": 0,
+      "failed_reasons": {
+        "HTTP 422：译文生成达到长度上限，未把截断文本当成成功结果\n失败记录已保存至 ios-runs.jsonl。": 10
+      }
+    },
+    {
+      "sample_id": "05",
+      "mode": "S0",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 6169.963525008643,
+      "median_ms": 6113.3214166911785,
+      "sd_ms": 162.61739249547435,
+      "min_ms": 6014.695833320729,
+      "max_ms": 6560.851416666992,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 0,
+      "mean_stage_ms": {
+        "P": 135.50720832427032,
+        "O": 1407.350437506102,
+        "C": 0.005866651190444827,
+        "T": 4627.0933249848895
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "05",
+      "mode": "S1",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 4964.099604182411,
+      "median_ms": 4967.981312482152,
+      "sd_ms": 22.94154130684664,
+      "min_ms": 4915.043458342552,
+      "max_ms": 4992.412583320402,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 2385181,
+      "mean_stage_ms": {
+        "P": 137.05189167521894,
+        "O": 1061.4279999999999,
+        "C": 0.004,
+        "T": 3524.7972
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "05",
+      "mode": "S2",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 5210.212845844217,
+      "median_ms": 5203.406812535832,
+      "sd_ms": 51.3939882188917,
+      "min_ms": 5136.985958379228,
+      "max_ms": 5295.547458343208,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 1838,
+      "mean_stage_ms": {
+        "P": 136.57234166166745,
+        "O": 1445.7939166633878,
+        "C": 0.00585417146794498,
+        "T": 3555.0788
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    },
+    {
+      "sample_id": "05",
+      "mode": "S3",
+      "attempts": 10,
+      "successes": 10,
+      "errors": 0,
+      "no_text": 0,
+      "success_rate": 1.0,
+      "mean_ms": 4775.090041663498,
+      "median_ms": 4775.418604171136,
+      "sd_ms": 59.94222937193816,
+      "min_ms": 4687.038749980275,
+      "max_ms": 4877.298666688148,
+      "failure_mean_ms": null,
+      "mean_upload_body_bytes": 1724481,
+      "mean_stage_ms": {
+        "P": 168.0046,
+        "O": 1024.618,
+        "C": 0.0039000000000000003,
+        "T": 3409.7475
+      },
+      "distinct_outputs": 1,
+      "failed_reasons": {}
+    }
+  ],
+  "output_consistency": {
+    "01": {
+      "observed_modes": [
+        "S0",
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "distinct_ocr_outputs": 1,
+      "distinct_translation_outputs": 1
+    },
+    "02": {
+      "observed_modes": [
+        "S0",
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "distinct_ocr_outputs": 1,
+      "distinct_translation_outputs": 1
+    },
+    "03": {
+      "observed_modes": [
+        "S0",
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "distinct_ocr_outputs": 1,
+      "distinct_translation_outputs": 1
+    },
+    "04": {
+      "observed_modes": [],
+      "distinct_ocr_outputs": 0,
+      "distinct_translation_outputs": 0
+    },
+    "05": {
+      "observed_modes": [
+        "S0",
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "distinct_ocr_outputs": 2,
+      "distinct_translation_outputs": 2
+    }
+  },
+  "thermal_transitions": {
+    "0->0": 200
+  },
+  "low_power_trials": 0,
+  "nonforeground_trials": 0,
+  "battery_states": [
+    2
+  ],
+  "cooldown_seconds": 0,
+  "metadata": {
+    "app_build": "4",
+    "app_version": "0.3.0",
+    "conditions": {
+      "application_state": 0,
+      "battery_level": 0.75,
+      "battery_state": 2,
+      "low_power_mode": false,
+      "thermal_state": 0
+    },
+    "environment": "ios-physical-device-27.2.1",
+    "server_model": {
+      "decoding": "greedy-no-cache-128-v1",
+      "ocr": "rapidocr-onnxruntime-1.4.4",
+      "ocr_manifest_sha256": "ed9e91e088a9cc5a2a9e1408bd41614ff28afc685212fda2a1cfb5793d74639b",
+      "preprocess": "exif-rgb-max1600-png-v1",
+      "translation": "Xenova/opus-mt-en-zh@046f55a",
+      "translation_execution": "cpu-unfused-deterministic-v1",
+      "translation_manifest_sha256": "63909f657650eb48451b76daf24b3f9ff9209b2f6f4fe45fbf9af3212c5fd9e1"
+    },
+    "started_at": "2026-11-27T14:57:57Z",
+    "timing": "Production PipelineRunner; excludes model preparation, health, file reads, logging, UI and inter-run pause"
+  },
+  "finished_at": "2026-11-27T15:14:58Z",
+  "input_sha256": {
+    "01": "f98d91c6117e47495458edbedc1040ee61346e91dd87ea1ad4dd02e7c34c8cde",
+    "02": "4d0af9a72fcd56f0fc51e8aec4a2ec6f0d9b1edf40b63e3f6ca17af712ae7341",
+    "03": "ed59f2ab7b8d86519c50d36b85da14d4705b4e894487950fc8fb8f7400f04c74",
+    "04": "a0f537b438ab4e90f902dd80c53240e9959475caab18bb755ccdf6ee0d56b85d",
+    "05": "c402487d2d7887daf9d11749d38a5af29ac9629db63fddae3d445d19930d9ff4"
+  },
+  "raw_trials_sha256": "dac9ea858032f6e53112f4f1f0a71906b006bfa5ad09c9035ed299dbf9d4c7e3",
+  "interpretation": "SUCCESS means pipeline completion, not correct translation. Latency summaries exclude warmup, ERROR and NO_TEXT. S3 preprocessing may change OCR text and translation workload."
+}

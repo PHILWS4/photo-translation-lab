@@ -4,6 +4,10 @@
 
 **iPhone 从这里开始：[安装与联调说明](docs/IOS.md)**。双击 `打开iOS工程.command` 打开工程；使用 `启动手机联调服务器.command` 提供局域网服务。以下四方案快速开始仍针对 Mac 参考客户端。
 
+## 中期成果
+
+[中期报告与实验数据摘要](reports/midterm-2026-11-27/README.md)：16 Pro 五图四方案共 200 次正式测量，160 次返回结果、40 次生成上限失败。含 Word/PDF、性能图表和失败分析；成功返回不代表译文正确。
+
 ## 第一次使用
 
 原开发 Mac 已准备的环境位于 `.venv`，模型位于 `models/translation`。新克隆的仓库不含这些环境和模型，须先完成下方迁移步骤。无需购买云服务或填写 API Key。
@@ -59,6 +63,7 @@ PYTHONPATH=. .venv/bin/python scripts/smoke.py
 - `lab/server.py`：FastAPI 服务与输入校验。
 - `contracts/openapi.json`：从实际服务代码导出的移动端接口定义。
 - `docs/IOS.md`：当前 iPhone 安装、联调、测量口径与未完成范围。
+- `docs/BENCHMARK.md`：真机批量采集、预热/失败区分及结果核验。
 - `ios/`：SwiftUI 工程、HTTP 客户端及本地引擎接口。
 - `docs/ANDROID.md`：原 Android 接入约定，保留作历史参考。
 - `docs/EXPERIMENTS.md`：测量口径、实验记录和后续工作。

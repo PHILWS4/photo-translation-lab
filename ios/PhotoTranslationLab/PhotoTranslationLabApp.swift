@@ -134,6 +134,12 @@ struct ContentView: View {
                 }
             }.navigationTitle("拍照翻译实验")
             .task {
+                let args = ProcessInfo.processInfo.arguments
+                if !selfTestStarted, let index = args.firstIndex(of: "--benchmark-config"), index + 1 < args.count {
+                    selfTestStarted = true; busy = true
+                    message = await BenchmarkRunner.run(configName: args[index + 1], environment: environment) { message = $0 }
+                    busy = false; return
+                }
                 if !selfTestStarted, ProcessInfo.processInfo.arguments.contains("--translation-self-test") {
                     selfTestStarted = true; busy = true; message = "正在运行本地翻译与 S0 自检…"
                     let remote = ProcessInfo.processInfo.arguments.contains("--all-partitions-self-test") ? address : nil
